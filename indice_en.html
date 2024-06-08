@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UbicaT</title>
+  <link rel="shortcut icon" href="./images/IconoWeb.png" type="image/x-icon">
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/estilosAPP.css">
+  <link rel="stylesheet" href="styles.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+  <span class="en">Spanish </span>
+  <input type="checkbox" class="check" checked>
+  <span class="es">English</span>
+
+  <header class="hero">
+    <nav class="nav container">
+      <div class="nav__background2"></div>
+      <div class="nav__background"></div>
+
+      <div class="nav__logo">
+        <img src="./images/LogoUABC.png" class="logouabc" alt="">
+        <h2 class="nav__title">Universidad Autónoma de Baja California</h2>
+      </div>
+      <ul class="nav__link nav__link--menu">
+        <li class="nav__items">
+          <a href="index_en.html" class="nav__links">Home</a>
+        </li>
+        <li class="nav__items">
+          <a href="https://www.uabc.mx/" target="_blank" class="nav__links">UABC Website</a>
+        </li>
+        <li class="nav__items">
+          <a href="#" class="nav__links">Contact</a>
+        </li>
+        <img src="/images/close.svg" alt="" class="nav__close">
+      </ul>
+      <div class="nav__menu">
+        <img src="./images/menu.svg" alt="" class="nav__img">
+      </div>
+    </nav>
+    <section class="hero__container container">
+      <h1 class="facultad_salon__title">Select the destination</h1>
+
+      <div class="selectors">
+        <div>
+          <h2 class="ubicacion-title">Select your location:</h2>
+          <label for="ubicacion" class="ubicacion-label">Where you are:</label>
+          <select id="ubicacion" class="ubicacion-select">
+            <option value="">Select a building</option>
+            <option value="edificio1">E55</option>
+            <option value="edificio2">E1</option>
+            <!-- Add more building options here -->
+          </select>
+        </div>
+        <div>
+          <label for="facultad" class="facultad-label">Faculty:</label>
+          <select id="facultad" class="facultad-select">
+            <option value="">Select a faculty</option>
+            <option value="facultad1">FIAD</option>
+            <option value="facultad2">FCM</option>
+          </select>
+        </div>
+        <div>
+          <label for="salon" class="salon-label">Buildings/Classroom:</label>
+          <select id="salon" class="salon-select" disabled>
+            <option value="">Select a classroom</option>
+          </select>
+        </div>
+        <!-- Power button -->
+        <div class="power-button">
+          <button id="powerBtn" class="power-btn"></button>
+          <h2 class="AreasDeInteres_title">Areas of interest</h2>
+          <h2 class="Simbologia_title">Symbolism</h2>
+          <img src="./mapas/banos.png" class="map-banos" alt="Ensenada Map">
+          <h2 class="banos-title">Restrooms</h2>
+          <img src="./mapas/precaucion.png" class="map-precaucion" alt="Ensenada Map">
+          <h2 class="precaucion_en-title">      Safety Zone</h2>
+          <img src="./mapas/liena_azul.png" class="map-azul" alt="Ensenada Map">
+          <h2 class="azul-title">Alternative Path</h2>
+          <img src="./mapas/linea_roja.png" class="map-rojo" alt="Ensenada Map">
+          <h2 class="rojo-title">Fastest Path</h2>
+        </div>
+      </div>
+
+      <div class="map-container" style="position: relative;">
+        <img src="./mapas/mapa_ensenada.png" class="map-image" alt="Ensenada Map">
+        <!-- Container for circles -->
+        <div class="markers-container"></div>
+      </div>
+    </section>
+  </header>
+
+  <script src="./js/idioma.js"></script>
+  <script src="./app_js/seleccion.js"></script>
+  <script src="./app_js/boton_AreaDeInteres.js"></script>
+</body>
+
+</html>
